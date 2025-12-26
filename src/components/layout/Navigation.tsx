@@ -5,8 +5,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Icons } from '@/components/ui/Icons';
 
-// Simplified navigation - only essential pages
+// Navigation with Home included
 const navLinks = [
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'About', href: '/about' },
@@ -44,7 +45,7 @@ export default function Navigation() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="relative px-5 py-2 text-sm text-white/60 hover:text-white transition-colors duration-200 rounded-full group"
+                                    className="relative px-4 py-2 text-sm text-white/60 hover:text-white transition-colors duration-200 rounded-full group"
                                 >
                                     <span className="relative z-10">{link.name}</span>
                                     <motion.div

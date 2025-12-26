@@ -122,20 +122,27 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
+            {/* Scroll Indicator - Professional Mouse Icon */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2"
             >
                 <motion.div
-                    animate={{ y: [0, 8, 0] }}
+                    animate={{ y: [0, 6, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    className="flex flex-col items-center gap-2 text-white/40"
+                    className="flex flex-col items-center gap-3"
                 >
-                    <span className="text-xs uppercase tracking-widest">Scroll</span>
-                    <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
+                    {/* Mouse Icon */}
+                    <div className="relative w-6 h-10 rounded-full border-2 border-white/20 flex justify-center">
+                        {/* Scroll Wheel */}
+                        <motion.div
+                            animate={{ y: [0, 8, 0], opacity: [1, 0.3, 1] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                            className="w-1 h-2 bg-gradient-to-b from-nc-coral to-nc-purple rounded-full mt-2"
+                        />
+                    </div>
                 </motion.div>
             </motion.div>
         </section>
